@@ -190,6 +190,10 @@ ifeq ($(BOARD_AVB_ENABLE), true)
    BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
 endif
 
+# Vendor init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH_COMMON):libinit_msmnile
+TARGET_RECOVERY_DEVICE_MODULES := libinit_msmnile
+
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_HOSTAPD_DRIVER := NL80211
