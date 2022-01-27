@@ -18,7 +18,6 @@ gf.debug.                                                       u:object_r:vendo
 
 # Lenovo factory props
 sys.bt.address                                                  u:object_r:fac_prop:s0
-sys.lenovosn                                                    u:object_r:fac_prop:s0
 sys.wifimac                                                     u:object_r:fac_prop:s0
 
 # PowerHAL

@@ -1,8 +1,8 @@
 cc_binary {
-    name: "android.hardware.lights-service.lenovo_msmnile",
+    name: "android.hardware.lights-service.asus_msmnile",
     relative_install_path: "hw",
-    init_rc: ["lights-lenovo_msmnile.rc"],
-    vintf_fragments: ["lights-lenovo_msmnile.xml"],
+    init_rc: ["lights-asus_msmnile.rc"],
+    vintf_fragments: ["lights-asus_msmnile.xml"],
     vendor: true,
     shared_libs: [
         "libbase",

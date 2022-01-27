@@ -12,8 +12,7 @@ vendor/lib64/libadsp_default_listener.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # ADSP Modules
-vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
-vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libcamera_nn_skel.so
 vendor/lib/rfsa/adsp/libcvpdsp_skel.so
@@ -62,9 +61,11 @@ vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
-# Bluetooth (aptX) - from crosshatch-user 11 RP1A.201105.002 6869500 release-keys
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+# Bluetooth (aptX) - from crosshatch
+-app/aptxals/aptxals.apk|8beac78b061df2770ec9fa2af9cd0755289463d1
+-app/aptxalsOverlay/aptxalsOverlay.apk|d2c8d15851cd751610b43b851a5bffc104ffb5a9
+product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -83,9 +84,8 @@ vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
 
-# Charger
-vendor/bin/hvdcp_opti
-vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
+# Charger - from I01WD - asus/WW_I01WD/ASUS_I01WD:11/RKQ1.200710.002/18.0610.2106.156-0
+system/bin/charger|5c2f005d27ff775616d8e6e05121066bac5bf853
 
 # CNE
 system_ext/framework/com.quicinc.cne.api-V1.1-java.jar
@@ -414,13 +414,12 @@ vendor/lib64/libhbtpclient.so
 vendor/lib64/libhbtpdsp.so
 vendor/lib64/libhbtpfrmwk.so
 
+# HotwordEnrollment - from I01WD - asus/WW_I01WD/ASUS_I01WD:11/RKQ1.200710.002/18.0610.2106.156-0
+-product/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk
+-product/priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk
+
 # Input
 vendor/etc/excluded-input-devices.xml
-
-# IFAA
-vendor/bin/hw/vendor.zui.hardware.ifaa@1.0-service
-vendor/etc/init/vendor.zui.hardware.ifaa@1.0-service.rc
-vendor/lib64/vendor.zui.hardware.ifaa@1.0.so
 
 # IO Prefetcher
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service

@@ -38,10 +38,10 @@ static inline const char *BtmGetDefaultName()
     char product_device[92];
     property_get("ro.product.device", product_device, "");
 
-    if (strcmp(product_device, "heart") == 0)
-        return "Lenovo Z5 Pro GT";
-    if (strcmp(product_device, "zippo") == 0)
-        return "Lenovo Z6 Pro";
+    if (strcmp(product_device, "I001D") == 0)
+        return "Asus Rog Phone 2";
+    if (strcmp(product_device, "I01WD") == 0)
+        return "Asus Zenfone 6z";
 
     // Fallback to ro.product.model
     return "";

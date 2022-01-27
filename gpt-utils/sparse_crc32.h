@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The LineageOS Project
+ * Copyright (C) 2010 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,18 +14,11 @@
  * limitations under the License.
  */
 
+#ifndef _LIBSPARSE_SPARSE_CRC32_H_
+#define _LIBSPARSE_SPARSE_CRC32_H_
+
 #include <stdint.h>
-#include <drm/sde_drm.h>
-#include <compositionengine/FodExtension.h>
 
-uint32_t getFodZOrder(uint32_t z, bool touched) {
-    if (touched) {
-        z |= FOD_PRESSED_LAYER_ZORDER;
-    }
+uint32_t sparse_crc32(uint32_t crc, const void* buf, size_t size);
 
-    return z;
-}
-
-uint64_t getFodUsageBits(uint64_t usageBits, bool) {
-    return usageBits;
-}
+#endif

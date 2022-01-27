@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.livedisplay@2.1-service.lenovo_msmnile"
+#define LOG_TAG "vendor.lineage.livedisplay@2.1-service.asus_msmnile"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
