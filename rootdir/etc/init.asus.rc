@@ -26,9 +26,9 @@ on fs
     exec /system/bin/e2fsck -p /dev/block/bootdevice/by-name/logdump
     mount ext4 /dev/block/bootdevice/by-name/logdump /batinfo nosuid nodev noatime barrier=1
 
-    wait /dev/block/bootdevice/by-name/xrom_a
-    wait /dev/block/bootdevice/by-name/xrom_b
-    mount_slotselect ext4 /dev/block/bootdevice/by-name/xrom /xrom ro barrier=1 nosuid nodev noatime noauto_da_alloc
+    #wait /dev/block/bootdevice/by-name/xrom_a
+    #wait /dev/block/bootdevice/by-name/xrom_b
+    #mount_slotselect ext4 /dev/block/bootdevice/by-name/xrom /xrom ro barrier=1 nosuid nodev noatime noauto_da_alloc
 
 on post-fs
 on post-fs-data
