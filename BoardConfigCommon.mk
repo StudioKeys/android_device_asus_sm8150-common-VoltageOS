@@ -170,7 +170,6 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     APD \
     asdf \
     batinfo \
-    voucher \
     xrom
 
 # Sepolicy
