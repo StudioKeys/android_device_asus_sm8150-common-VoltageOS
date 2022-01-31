@@ -1,4 +1,3 @@
-
 # Copyright (C) 2019 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -31,17 +30,19 @@ TARGET_BOOTLOADER_BOARD_NAME := msmnile
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
-BOARD_BOOTIMG_HEADER_VERSION := 1
-BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
-BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xa90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 androidboot.usbcontroller=a600000.dwc3
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xa90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 androidboot.usbcontroller=a600000.dwc3 kpti=off
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-BOARD_KERNEL_IMAGE_NAME := Image-dtb
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-BOARD_RAMDISK_OFFSET := 0x01000000
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_TAGS_OFFSET := 0x00008000
+BOARD_RAMDISK_OFFSET     := 0x01000000
+BOARD_TAGS_OFFSET := 0x00000100
 TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_COMPILE_WITH_MSM_KERNEL := true
 BOARD_KERNEL_SEPARATED_DTBO := true
+TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
