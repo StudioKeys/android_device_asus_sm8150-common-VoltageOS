@@ -1,2 +1,7 @@
 type gx_fpd_device, dev_type;
 type vl53l1_device, dev_type;
+
+type asdf_block_device, dev_type;
+type asus_block_device, dev_type;
+
+type fingerprintd_device, dev_type;
