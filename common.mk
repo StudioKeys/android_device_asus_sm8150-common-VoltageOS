@@ -504,6 +504,11 @@ PRODUCT_PACKAGES_DEBUG += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
+    android.hardware.usb@1.0
+
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
 
 # Vibrator
 PRODUCT_PACKAGES += \
