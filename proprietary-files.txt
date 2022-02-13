@@ -579,6 +579,10 @@ vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
+# Power NDK - from AOSP-Master
+vendor/lib/android.hardware.power-V1-ndk_platform.so|cdf0c93a5815bff05f658786d1c66ca0e3bc257b
+vendor/lib64/android.hardware.power-V1-ndk_platform.so|43402943a5d96a3ca0942cdf1a3d8a55c49bd70a
+
 # Power-off alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
 system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
