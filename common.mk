@@ -460,6 +460,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.3 \
     android.hardware.radio@1.4 \
     android.hardware.radio@1.5 \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.radio.deprecated@1.0.vendor \
     libprotobuf-cpp-full \
     libril \
     librilutils \
