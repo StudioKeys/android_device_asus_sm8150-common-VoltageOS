@@ -94,6 +94,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# Atrace
+PRODUCT_PACKAGES += \
+    android.hardware.atrace@1.0-service
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
