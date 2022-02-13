@@ -180,13 +180,14 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.4 \
     android.hardware.camera.device@3.5 \
     android.hardware.camera.provider@2.4 \
-    android.hardware.neuralnetworks@1.0 \
+    android.hardware.camera.device@3.6 \
+    android.hardware.camera.device@3.6.vendor \
     libexif \
     libcamera2ndk_vendor \
     libdng_sdk.vendor \
     libgui_vendor \
     libstdc++.vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
+    vendor.qti.hardware.camera.postproc@1.0.vendor \
     Snap
 
 PRODUCT_COPY_FILES += \
@@ -514,7 +515,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    android.hardware.usb@1.0-service \
     android.hardware.usb@1.0
 
 # Vendor service manager
