@@ -251,8 +251,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # Device-specific settings
-PRODUCT_PACKAGES += \
-    AsusParts
+#PRODUCT_PACKAGES += \
+#    AsusParts
 
 # Display
 PRODUCT_PACKAGES += \
