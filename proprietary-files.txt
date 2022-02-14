@@ -693,6 +693,10 @@ vendor/firmware/ipa_uc.mdt
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
+# Lights NDK - from AOSP Master
+vendor/lib64/android.hardware.light-V1-ndk_platform.so|633449561b51fe23a21b46073ca8ada1fe79655a
+vendor/lib/android.hardware.light-V1-ndk_platform.so|6afe0988bdbd9f699f658058f766de8b4df326ce
+
 # Listen
 vendor/lib/libadpcmdec.so
 vendor/lib/libcapiv2svacnn.so
