@@ -73,6 +73,7 @@ vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
+vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
@@ -81,6 +82,7 @@ vendor/lib64/btaudio_offload_if.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Broadcast radio
 vendor/lib/hw/android.hardware.broadcastradio@1.0-impl.so
@@ -197,6 +199,11 @@ vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
+# Connection Security
+vendor/bin/ssgqmigd
+vendor/bin/ssgtzd
+vendor/lib64/libminksocket.so
+
 # CVP
 vendor/lib/libcvp.so
 vendor/lib/libcvp_common.so
@@ -207,8 +214,46 @@ vendor/lib64/libcvp_common.so
 vendor/lib64/libcvp_stub.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
+# Data
+vendor/bin/adpl
+vendor/bin/ipacm-diag
+vendor/bin/netmgrd
+vendor/bin/port-bridge
+vendor/bin/qti
+vendor/etc/data/dsi_config.xml
+vendor/etc/data/netmgr_config.xml
+vendor/etc/init/ipacm-diag.rc
+vendor/etc/init/ipa_fws.rc
+vendor/etc/init/netmgrd.rc
+vendor/etc/init/port-bridge.rc
+vendor/firmware/ipa_fws.b00
+vendor/firmware/ipa_fws.b01
+vendor/firmware/ipa_fws.b02
+vendor/firmware/ipa_fws.b03
+vendor/firmware/ipa_fws.b04
+vendor/firmware/ipa_fws.elf
+vendor/firmware/ipa_fws.mdt
+vendor/lib64/libconfigdb.so
+vendor/lib64/libdsi_netctrl.so
+vendor/lib64/libdsutils.so
+vendor/lib64/libnetmgr.so
+vendor/lib64/libnetmgr_common.so
+vendor/lib64/libnetmgr_nr_fusion.so
+vendor/lib64/libnetmgr_rmnet_ext.so
+vendor/lib64/libnlnetmgr.so
+vendor/lib64/libqcmaputils.so
+vendor/lib64/libqdi.so
+vendor/lib64/libqdp.so
+vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
+
 # Display (HDR)
 vendor/lib64/libhdr_tm.so
+
+# Diagnostics
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/vendor.qti.diaghal@1.0.so
+vendor/lib/libdiag.so
+vendor/lib64/libdiag.so
 
 # Display (SDM)
 vendor/bin/ppd
@@ -367,7 +412,6 @@ system_ext/lib64/libdpmctmgr.so
 system_ext/lib64/libdpmfdmgr.so
 system_ext/lib64/libdpmframework.so
 system_ext/lib64/libdpmtcm.so
-system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
@@ -397,6 +441,11 @@ vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 vendor/lib64/libtzdrmgenprov.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
+
+# FastCV
+-vendor/lib/libfastcvopt.so
+vendor/lib64/libfastcvdsp_stub.so
+-vendor/lib64/libfastcvopt.so
 
 # Firmwares
 vendor/firmware/cpe_sm8150_image/cpe_9340.b01
@@ -429,8 +478,6 @@ vendor/firmware/q6_sm8150_image/adsp.b13
 vendor/firmware/q6_sm8150_image/adsp.b14
 vendor/firmware/q6_sm8150_image/adsp.mdt
 vendor/firmware/wigig/wigig.ini
-vendor/firmware/bdwlan.bin
-vendor/firmware/bdwlan_TWAS.bin
 vendor/firmware/cdsp.b00
 vendor/firmware/cdsp.b01
 vendor/firmware/cdsp.b02
@@ -471,13 +518,6 @@ vendor/firmware/hdcpsrm.b05
 vendor/firmware/hdcpsrm.b06
 vendor/firmware/hdcpsrm.b07
 vendor/firmware/hdcpsrm.mdt
-vendor/firmware/ipa_fws.b00
-vendor/firmware/ipa_fws.b01
-vendor/firmware/ipa_fws.b02
-vendor/firmware/ipa_fws.b03
-vendor/firmware/ipa_fws.b04
-vendor/firmware/ipa_fws.elf
-vendor/firmware/ipa_fws.mdt
 vendor/firmware/ipa_uc.b00
 vendor/firmware/ipa_uc.b01
 vendor/firmware/ipa_uc.b02
@@ -635,7 +675,6 @@ vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_wifihal.so
-vendor/lib64/libminksocket.so
 vendor/lib64/libqcc_file_agent.so
 vendor/lib64/libqdma_file_agent.so
 vendor/lib64/libslimclient.so
@@ -676,13 +715,6 @@ vendor/lib64/libqtikeymaster4.so|3bc0833a03911e2f5f2d36fd754d6e02efba0df3
 vendor/lib64/libspcom.so|2c94581e2645034cfa25b4752eff450c65e1b9d5
 
 # IPA Firmware
-vendor/firmware/ipa_fws.b00
-vendor/firmware/ipa_fws.b01
-vendor/firmware/ipa_fws.b02
-vendor/firmware/ipa_fws.b03
-vendor/firmware/ipa_fws.b04
-vendor/firmware/ipa_fws.elf
-vendor/firmware/ipa_fws.mdt
 vendor/firmware/ipa_uc.b00
 vendor/firmware/ipa_uc.b01
 vendor/firmware/ipa_uc.b02
@@ -845,13 +877,8 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # Qualcomm MSM Interface
 vendor/bin/irsc_util
-vendor/lib64/libdiag.so
-vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
 vendor/lib64/libqcci_legacy.so
-vendor/lib64/libqcmaputils.so
-vendor/lib64/libqdi.so
-vendor/lib64/libqdp.so
 vendor/lib64/libqmi.so
 vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_client_helper.so
@@ -861,7 +888,6 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiservices.so
-vendor/lib/libdiag.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libmdmdetect.so
@@ -897,40 +923,25 @@ vendor/bin/hw/qcrild
 vendor/bin/adpl
 vendor/bin/ks
 vendor/bin/mdm_helper
-vendor/bin/netmgrd
 vendor/bin/pd-mapper
-vendor/bin/port-bridge
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
-vendor/bin/qti
 vendor/bin/rmt_storage
-vendor/bin/ssgqmigd
-vendor/bin/ssgtzd
 vendor/bin/tftp_server
-vendor/etc/data/dsi_config.xml
-vendor/etc/data/netmgr_config.xml
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
 vendor/etc/init/init-qcril-data.rc
-vendor/etc/init/netmgrd.rc
-vendor/etc/init/port-bridge.rc
 vendor/etc/init/qcrild.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
 vendor/lib64/deviceInfoServiceModule.so
-vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libmdmimgload.so
 vendor/lib64/libminkdescriptor.so
-vendor/lib64/libnetmgr.so
-vendor/lib64/libnetmgr_common.so
-vendor/lib64/libnetmgr_nr_fusion.so
-vendor/lib64/libnetmgr_rmnet_ext.so
-vendor/lib64/libnlnetmgr.so
 vendor/lib64/liboemaids_vendor.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
@@ -951,7 +962,6 @@ vendor/lib64/qcrild_librilutils.so
 vendor/lib64/qtibus.so
 vendor/lib64/qtimutex.so
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so
@@ -982,7 +992,6 @@ system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
-system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
@@ -1046,15 +1055,12 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Snapdragon Computer Vision Engine
 vendor/lib/libfastcvdsp_stub.so
--vendor/lib/libfastcvopt.so
 vendor/lib/libscveCommon.so
 vendor/lib/libscveCommon_stub.so
 vendor/lib/libscveObjectSegmentation.so
 vendor/lib/libscveObjectSegmentation_stub.so
 vendor/lib/libscveObjectTracker.so
 vendor/lib/libscveObjectTracker_stub.so
-vendor/lib64/libfastcvdsp_stub.so
--vendor/lib64/libfastcvopt.so
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libscveObjectSegmentation.so
@@ -1127,6 +1133,8 @@ vendor/lib64/libwvhidl.so
 
 # WiFi
 vendor/bin/cnss-daemon
+vendor/firmware/bdwlan.bin
+vendor/firmware/bdwlan_TWAS.bin
 
 # Misc
 vendor/lib/libxml.so
@@ -1134,7 +1142,6 @@ vendor/lib64/libxml.so
 vendor/lib/libvl53l1_daemon.so
 vendor/lib64/libvl53l1_daemon.so
 vendor/lib/libdsi_netctrl.so
-vendor/lib64/libdsi_netctrl.so
 
 # WiFi Display - from NX627J - nx627j-qssi_NX627J-user-11-RKQ1.200826.002-nubia.20210824.181213-release-keys
 system_ext/bin/wfdservice|91f6e2d58de9354a694d3b3da6e6d224dd7e47c1
