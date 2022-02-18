@@ -6,12 +6,10 @@
 /dev/block/platform/soc/1d84000\.ufshc/by-name/asdf                     u:object_r:asdf_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/batinfo                  u:object_r:asus_block_device:s0
 
-# Binaries
-/(vendor|system/vendor)/bin/vl53l1_daemon_main                                                                          u:object_r:vl53l1_daemon_main_exec:s0
-
 # Devices
-/dev/goodix_fp                                                                                                          u:object_r:gx_fpd_device:s0
-/dev/stmvl53l1_ranging                                                                                                  u:object_r:vl53l1_device:s0
+/dev/goodix_fp          u:object_r:fingerprintd_device:s0
+/dev/lsensor            u:object_r:sensors_device:s0
+/dev/psensor            u:object_r:sensors_device:s0
 
 # Files in rootfs
 /ADF(/.*)?              u:object_r:demoapp_file:s0
@@ -20,14 +18,12 @@
 /batinfo(/.*)?          u:object_r:bat_file:s0
 /xrom(/.*)?             u:object_r:xrom_file:s0
 
-# HALs
-/(vendor|system/vendor)/bin/hw/vendor\.zui\.hardware\.ifaa@1\.0-service                                                 u:object_r:hal_ifaa_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.asus_msmnile                                        u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.asus_msmnile                                u:object_r:hal_livedisplay_asus_msmnile_exec:s0
+# Files in sysfs
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/thermal_gpio                    u:object_r:sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/TypeC_Side_Detect2              u:object_r:sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:vadc@3100/iio:device1/in_temp_wp_therm_input   u:object_r:sysfs_battery_supply:s0
+/sys/devices/virtual/sensors(/.*)?                                                                                                          u:object_r:vendor_sysfs_sensors:s0
 
-# Sys files
-/sys/class/touch/tp_dev(/.*)?                                                                                           u:object_r:sysfs_tp:s0
-/sys/devices/platform/soc/[a-z0-9]+.qcom,spmi/spmi-[0-1]/spmi0-0[0-9]/[a-z0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,leds@d000/leds(/.*)?            u:object_r:sysfs_leds:s0
-/sys/devices/platform/soc/[a-z0-9]+.i2c/i2c-[0-9]/[0-9]-[0-9]+/leds(/.*)?                                                                           u:object_r:sysfs_leds:s0
-/sys/module/stmvl53l1(/.*)?                                                                                             u:object_r:sysfs_vl53l1:s0
-/sys/devices/virtual/touch/tp_dev(/.*)?                                                                                 u:object_r:sysfs_tp:s0
+# Binaries
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.asus_msmnile                  u:object_r:hal_light_default_exec:s0
+/vendor/bin/awk                                                                                 u:object_r:vendor_toolbox_exec:s0

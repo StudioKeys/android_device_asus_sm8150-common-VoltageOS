@@ -1,29 +1,11 @@
-# Audio
-vendor.audio.pa.cp.calibration                                  u:object_r:vendor_audio_prop:s0
-
-# Camera
-persist.camera.arcsoft.                                         u:object_r:vendor_camera_prop:s0
-persist.camera.pandora.                                         u:object_r:vendor_camera_prop:s0
-persist.camera.watermark.image_rotation                         u:object_r:vendor_camera_prop:s0
-persist.camera.watermark.sensor_position                        u:object_r:vendor_camera_prop:s0
-ro.camera                                                       u:object_r:vendor_camera_prop:s0
-ro.vendor.camera.                                               u:object_r:vendor_camera_prop:s0
-sys.camera.packagename.cts                                      u:object_r:vendor_camera_prop:s0
-sys.camera.packagename.zui                                      u:object_r:vendor_camera_prop:s0
-sys.camera.restart.mark                                         u:object_r:vendor_camera_prop:s0
-sys.tof.cal                                                     u:object_r:vendor_camera_prop:s0
-
-# Fingerprint
-gf.debug.                                                       u:object_r:vendor_default_prop:s0
-
-# Lenovo factory props
-sys.bt.address                                                  u:object_r:fac_prop:s0
-sys.wifimac                                                     u:object_r:fac_prop:s0
-
-# PowerHAL
-vendor.powerhal.audio                                           u:object_r:vendor_power_prop:s0
-vendor.powerhal.dalvik.                                         u:object_r:vendor_power_prop:s0
-vendor.powerhal.init                                            u:object_r:vendor_power_prop:s0
-vendor.powerhal.lpm                                             u:object_r:vendor_power_prop:s0
-vendor.powerhal.rendering                                       u:object_r:vendor_power_prop:s0
-vendor.powerhal.state                                           u:object_r:vendor_power_prop:s0
+vendor.asus.dfps              u:object_r:vendor_dfps_prop:s0
+vendor.bluetooth.a2dp.getSinkLatency    u:object_r:vendor_bluetooth_prop:s0
+vendor.camera.                u:object_r:vendor_camera_prop:s0
+vendor.goodix.                u:object_r:vendor_gx_fpd_prop:s0
+persist.vendor.nfc.           u:object_r:vendor_nfc_prop:s0
+vendor.gsm.sim1.present       u:object_r:exported3_radio_prop:s0
+vendor.gsm.sim2.present       u:object_r:exported3_radio_prop:s0
+vendor.tel.                   u:object_r:exported3_radio_prop:s0
+ro.vendor.csc.modemhash1      u:object_r:exported3_radio_prop:s0
+ro.vendor.csc.modemhash2      u:object_r:exported3_radio_prop:s0
+vendor.thermal.               u:object_r:vendor_thermal_prop:s0

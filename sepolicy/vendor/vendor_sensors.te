@@ -1,1 +1,1 @@
-allow vendor_sensors mnt_vendor_file:lnk_file read;
+allow vendor_sensors mnt_vendor_file:file r_file_perms;
