@@ -380,9 +380,9 @@ PRODUCT_PACKAGES += \
     android.hardware.lights-service.asus_msmnile
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.1-service.asus_msmnile
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.livedisplay@2.0-service-sdm \
+#    vendor.lineage.livedisplay@2.1-service.asus_msmnile
 
 # Media
 PRODUCT_PACKAGES += \
@@ -610,8 +610,8 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-wfd.xml:system/etc/permissions/privapp-permissions-wfd.xml
