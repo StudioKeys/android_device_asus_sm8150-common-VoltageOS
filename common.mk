@@ -234,7 +234,6 @@ PRODUCT_COPY_FILES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    fstab.qcom \
     init.class_main.sh \
     init.crda.sh \
     init.mdm.sh \
