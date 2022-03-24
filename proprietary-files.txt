@@ -36,6 +36,10 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 vendor/lib/com.dsi.ant@1.0.so
 vendor/lib64/com.dsi.ant@1.0.so
 
+# aptX
+system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+
 # Audio (FX modules)
 vendor/lib/soundfx/libdtsaudio.so
 vendor/lib/soundfx/libdynproc.so
