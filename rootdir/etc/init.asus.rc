@@ -31,7 +31,16 @@ on fs
     #mount_slotselect ext4 /dev/block/bootdevice/by-name/xrom /xrom ro barrier=1 nosuid nodev noatime noauto_da_alloc
 
 on post-fs
+
+    # goodixfp permissions
+    chown system root /dev/goodix_fp
+    chmod 0760 /dev/goodix_fp
+
 on post-fs-data
+
+    # goodixfp permissions
+    mkdir /data/vendor/goodix 0777 system system
+    chmod 0777 /mnt/vendor/persist
 
     chmod 0666 /sys/class/drm/hdr_mode
     chmod 0666 /sys/class/drm/color_mode
