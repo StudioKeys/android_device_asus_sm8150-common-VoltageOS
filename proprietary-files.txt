@@ -230,13 +230,6 @@ vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/ipa_fws.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
-vendor/firmware/ipa_fws.b00
-vendor/firmware/ipa_fws.b01
-vendor/firmware/ipa_fws.b02
-vendor/firmware/ipa_fws.b03
-vendor/firmware/ipa_fws.b04
-vendor/firmware/ipa_fws.elf
-vendor/firmware/ipa_fws.mdt
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
