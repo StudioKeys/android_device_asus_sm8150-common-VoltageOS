@@ -70,9 +70,12 @@ if [ -d /config/usb_gadget ]; then
 	msm_serial=`cat /sys/devices/soc0/serial_number`;
 	msm_serial_hex=`printf %08X $msm_serial`
 	machine_type=`cat /sys/devices/soc0/machine`
-	setprop vendor.usb.product_string "$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
-	product_string="Asus I01WD"
+	product_string=`getprop ro.product.model`
+        if [ "$product_string" == "" ]; then
+	        product_string="OnePlus"
+        fi
 	setprop vendor.usb.product_string "$product_string"
+	echo "$product_string" > /config/usb_gadget/g1/strings/0x409/product
 	# ADB requires valid iSerialNumber; if ro.serialno is missing, use dummy
 	serialnumber=`cat /config/usb_gadget/g1/strings/0x409/serialnumber 2> /dev/null`
 	if [ "$serialnumber" == "" ]; then
