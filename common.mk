@@ -375,9 +375,6 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msmnile \
-    android.hardware.light@2.0-service \
-    android.hardware.light@2.0-impl \
     android.hardware.lights-service.asus_msmnile
 
 # LiveDisplay
