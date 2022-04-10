@@ -748,6 +748,7 @@ vendor/lib/libqmiservices.so
 vendor/lib/libsystem_health_mon.so
 
 # QCV
+vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
 vendor/lib64/libsoc_helper_jni.so
 vendor/lib64/libsoc_helper.so
@@ -938,16 +939,6 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
-
-# Vibrator
-vendor/bin/hw/vendor.qti.hardware.vibrator.service
-vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
--vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
-vendor/lib/hw/vibrator.default.so
-vendor/lib/libsoc_helper.so
-vendor/lib64/hw/vibrator.default.so
-vendor/lib64/libqtivibratoreffect.so
-vendor/lib64/vendor.qti.hardware.vibrator.impl.so
 
 # VPP
 vendor/bin/vppservice
