@@ -32,8 +32,8 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 # ANT+
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
-vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 vendor/lib/com.dsi.ant@1.0.so
+vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 vendor/lib64/com.dsi.ant@1.0.so
 
 # aptX
@@ -124,25 +124,23 @@ system_ext/lib64/vendor.qti.hardware.data.qmi@1.0.so
 -vendor/app/CneApp/CneApp.apk
 -vendor/app/IWlanService/IWlanService.apk
 vendor/bin/cnd
-vendor/etc/cne/profileSlm.xml
-vendor/etc/cne/slm.conf
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml
@@ -153,6 +151,8 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
+vendor/etc/cne/profileSlm.xml
+vendor/etc/cne/slm.conf
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
 vendor/lib64/libcne.so
@@ -179,8 +179,8 @@ vendor/lib64/vendor.qti.latency@2.0.so
 # Configstore
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # Connection Security
 vendor/bin/ssgqmigd
@@ -205,8 +205,8 @@ vendor/bin/port-bridge
 vendor/bin/qti
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
-vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/ipa_fws.rc
+vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
 vendor/lib64/libconfigdb.so
@@ -392,31 +392,6 @@ vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 
-# DRM
-vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
-vendor/bin/qseecomd
-vendor/etc/init/qseecomd.rc
-vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
-vendor/etc/gpfspath_oem_config.xml
-vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/libSecureUILib.so
-vendor/lib64/libStDrvInt.so
-vendor/lib64/libcpion.so
-vendor/lib64/libdrmfs.so
-vendor/lib64/libdrmtime.so
-vendor/lib64/libops.so
-vendor/lib64/libqisl.so
-vendor/lib64/librpmb.so
-vendor/lib64/libsecureui.so
-vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libspl.so
-vendor/lib64/libssd.so
-vendor/lib64/libtzdrmgenprov.so
-vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
-
 # FastCV
 -vendor/lib/libfastcvopt.so
 vendor/lib64/libfastcvdsp_stub.so
@@ -543,7 +518,7 @@ vendor/lib64/libkeymasterdeviceutils.so|3589f0f1a53662b93b58f6117927d2504fe4cba5
 vendor/lib64/libkeymasterprovision.so|c3ef91872b1f831244e2125392bd037206b3e210
 vendor/lib64/libkeymasterutils.so|6febbcfd1835dbf4ffe6222040de86b4a34857dc
 vendor/lib64/libqtikeymaster4.so|3bc0833a03911e2f5f2d36fd754d6e02efba0df3
-vendor/lib64/libspcom.so|2c94581e2645034cfa25b4752eff450c65e1b9d5
+vendor/lib64/libspcom.so|6619845a57ee816c7800b941a8634f3e5a0196de
 
 # IPA Firmware
 vendor/firmware/ipa_uc.b00
@@ -564,9 +539,9 @@ vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
+vendor/lib/libjnihelper.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
-vendor/lib/libjnihelper.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libgcs-calwrapper.so
@@ -607,10 +582,10 @@ vendor/lib/hal_libnfc.so
 vendor/lib/nfc_nci.nqx.default.hw.so
 vendor/lib/vendor.nxp.hardware.nfc@1.0.so
 vendor/lib/vendor.nxp.hardware.nfc@1.1.so
-vendor/lib64/vendor.nxp.hardware.nfc@1.0.so
-vendor/lib64/vendor.nxp.hardware.nfc@1.1.so
 vendor/lib64/hal_libnfc.so
 vendor/lib64/nfc_nci.nqx.default.hw.so
+vendor/lib64/vendor.nxp.hardware.nfc@1.0.so
+vendor/lib64/vendor.nxp.hardware.nfc@1.1.so
 
 # NFC configs
 vendor/etc/libnfc-nci.conf
@@ -619,7 +594,6 @@ vendor/etc/libnfc-nxp.conf
 # OMX
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
-vendor/lib/libdsd2pcm.so
 vendor/lib/libFlacSwDec.so
 vendor/lib/libMpeg4SwEncoder.so
 vendor/lib/libOmxAacDec.so
@@ -638,6 +612,7 @@ vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxVpp.so
 vendor/lib/libOmxWmaDec.so
+vendor/lib/libdsd2pcm.so
 vendor/lib/libswvdec.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
@@ -713,21 +688,6 @@ vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
 vendor/etc/seccomp_policy/qti-systemd.policy
-vendor/lib64/libidl.so
-vendor/lib64/libmdmdetect.so
-vendor/lib64/libqcci_legacy.so
-vendor/lib64/libqmi.so
-vendor/lib64/libqmi_cci.so
-vendor/lib64/libqmi_client_helper.so
-vendor/lib64/libqmi_client_qmux.so
-vendor/lib64/libqmi_common_so.so
-vendor/lib64/libqmi_csi.so
-vendor/lib64/libsmemlog.so
-vendor/lib64/libqmi_csvt_srvc.so
-vendor/lib64/libqmi_encdec.so
-vendor/lib64/libqmi_legacy.so
-vendor/lib64/libqmiservices.so
-vendor/lib64/libsystem_health_mon.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libmdmdetect.so
@@ -741,17 +701,48 @@ vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
-vendor/lib/libsmemlog.so
 vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
+vendor/lib/libsmemlog.so
 vendor/lib/libsystem_health_mon.so
+vendor/lib64/libidl.so
+vendor/lib64/libmdmdetect.so
+vendor/lib64/libqcci_legacy.so
+vendor/lib64/libqmi.so
+vendor/lib64/libqmi_cci.so
+vendor/lib64/libqmi_client_helper.so
+vendor/lib64/libqmi_client_qmux.so
+vendor/lib64/libqmi_common_so.so
+vendor/lib64/libqmi_csi.so
+vendor/lib64/libqmi_csvt_srvc.so
+vendor/lib64/libqmi_encdec.so
+vendor/lib64/libqmi_legacy.so
+vendor/lib64/libqmiservices.so
+vendor/lib64/libsmemlog.so
+vendor/lib64/libsystem_health_mon.so
 
 # QCV
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
-vendor/lib64/libsoc_helper_jni.so
 vendor/lib64/libsoc_helper.so
+vendor/lib64/libsoc_helper_jni.so
+
+# QSEECOM
+vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
+vendor/bin/qseecomd
+vendor/etc/init/qseecomd.rc
+vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
+vendor/etc/gpfspath_oem_config.xml
+vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
+vendor/lib64/libGPreqcancel.so
+vendor/lib64/libGPreqcancel_svc.so
+vendor/lib64/libQSEEComAPI.so
+vendor/lib64/libdrmfs.so
+vendor/lib64/libdrmtime.so
+vendor/lib64/librpmb.so
+vendor/lib64/libssd.so
+vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
 # RemoteFS
 vendor/bin/rmt_storage
@@ -878,7 +869,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
-# Secure element (ESE)
+# SecureMSM (GPQESE)
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
 vendor/lib/hw/vendor.qti.esepowermanager@1.1-impl.so
@@ -888,6 +879,40 @@ vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
+# SecureMSM (SECDISP)
+vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
+vendor/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
+vendor/lib64/libSecureUILib.so
+vendor/lib64/libStDrvInt.so
+vendor/lib64/libTouchInputVM.so
+vendor/lib64/libTrustedInput.so
+vendor/lib64/libTrustedInputTZ.so
+vendor/lib64/libTrustedUI.so
+vendor/lib64/libsecureui.so
+vendor/lib64/libsecureui_svcsock.so
+vendor/lib64/libsi.so
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+vendor/lib64/vendor.qti.hardware.systemhelper@1.0.so
+vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
+
+# SecureMSM
+vendor/bin/hdcp1prov
+vendor/bin/hdcp2p2prov
+vendor/lib64/libbase64.so
+vendor/lib64/libcpion.so
+vendor/lib64/libhdcp1prov.so|d8d58cbf3e28dec36fb205d585c1fda3f3029d3b
+vendor/lib64/libhdcp2p2prov.so|60e33d628d3d2f0c9c3f33526d971e2a8256cea0
+vendor/lib64/libhdcpsrm.so|df2e75437beae7de6c232addd42646ef5d7a5deb
+vendor/lib64/liboemcrypto.so
+vendor/lib64/libops.so
+vendor/lib64/libqisl.so
+vendor/lib64/libspl.so
+vendor/lib64/libtrustedapploader.so
+vendor/lib64/libtzdrmgenprov.so
+
 # SMC Invoke
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
@@ -896,13 +921,14 @@ vendor/lib64/libnative-api.so
 vendor/lib64/libqcbor.so
 
 # Snapdragon Computer Vision Engine
-vendor/lib/libfastcvdsp_stub.so
-vendor/lib/libscveCommon.so
-vendor/lib/libscveCommon_stub.so
-vendor/lib/libscveObjectSegmentation.so
-vendor/lib/libscveObjectSegmentation_stub.so
-vendor/lib/libscveObjectTracker.so
-vendor/lib/libscveObjectTracker_stub.so
+vendor/lib64/libscveCommon.so
+vendor/lib64/libscveCommon_stub.so
+vendor/lib64/libscveObjectSegmentation.so
+vendor/lib64/libscveObjectSegmentation_stub.so
+vendor/lib64/libscveObjectTracker.so
+vendor/lib64/libscveObjectTracker_stub.so
+
+# SCVE
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libscveObjectSegmentation.so
@@ -916,9 +942,10 @@ vendor/etc/init/vendor.qti.tftp.rc
 
 # Thermal
 vendor/bin/thermal-engine
+vendor/etc/init/init_thermal-engine.rc
 vendor/etc/thermal-engine.conf
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
 
 # Time services
 -vendor/app/TimeService/TimeService.apk
@@ -934,11 +961,6 @@ vendor/lib64/libGPQTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
-
-# Trusted User Interface
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # VPP
 vendor/bin/vppservice
@@ -963,7 +985,6 @@ vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib64/libtrustedapploader.so
 vendor/lib64/libwvhidl.so
 
 # WiFi
@@ -971,12 +992,8 @@ vendor/bin/cnss-daemon
 vendor/firmware/bdwlan.bin
 vendor/firmware/bdwlan_TWAS.bin
 
-# Misc
-vendor/lib/libxml.so
-vendor/lib64/libxml.so
-vendor/lib/libdsi_netctrl.so
-
 # WiFi Display - from NX627J - nx627j-qssi_NX627J-user-11-RKQ1.200826.002-nubia.20210824.181213-release-keys
+-system/framework/WfdCommon.jar|aa7470dd5ccb2e2c695fd54c3aff01d21e2d7472
 system_ext/bin/wfdservice|91f6e2d58de9354a694d3b3da6e6d224dd7e47c1
 system_ext/etc/init/wfdservice.rc|aab7aecb01c359fd521c99957c4d5bfd16a8dfae
 system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml|828999946f9dfef98f17f42a1c8daba47c2c442d
@@ -1021,6 +1038,7 @@ system_ext/lib64/libwfduibcsinkinterface.so|86477d60d65229e83046a9d60f984a6c8d3c
 system_ext/lib64/libwfduibcsrc.so|f15233e28b2c6faf2272be393e9068898b64bd6b
 system_ext/lib64/libwfduibcsrcinterface.so|b95ff44eeca6d7823acb296bb9a9b15c2a272dfb
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so|6810d41bb161d6fd1ea74317ecf7924a44eeb8f6
+-system_ext/priv-app/WfdService/WfdService.apk|1b346d2e2e28fd7404841935ae9205820201ae63
 vendor/bin/wfdhdcphalservice|047b81f6902ec29606dc72443dc74b58e83153b2
 vendor/bin/wfdvndservice|1a8d7363ef8e1d1c9b719d4d55762f17fcc3a5f9
 vendor/bin/wifidisplayhalservice|6d3d6471959dcd32100a0748518b93ad748399f8
@@ -1032,9 +1050,6 @@ vendor/etc/seccomp_policy/wfdvndservice.policy|b46f0c22a1f9b65c6750205e161c0a3f8
 vendor/etc/seccomp_policy/wifidisplayhalservice.policy|f113f27e0e301a18baf0ade08c23071a27c7dc52
 vendor/etc/wfdconfig.xml|9e13371f7ae509cc0bbb3f2ace93c5ea5d87bf0f
 vendor/lib/libFileMux_proprietary.so|34d6727b02f1a7898e58451769a9db1151d4b872
-vendor/lib/libhdcp1prov.so|e838dfa6fb80c175ec61f6ced5b5617fcc1bd31a
-vendor/lib/libhdcp2p2prov.so|dd1a01872f6c35126bf5e2e3699d2ae861e7ae38
-vendor/lib/libhdcpsrm.so|9eeff73827d9b2d16a7081f6f33e63faa9f6099c
 vendor/lib/libmm-hdcpmgr.so|f3a68aff6a051231b580303e2f875f3ca44f21aa
 vendor/lib/libmmrtpdecoder_proprietary.so|6961014e8c6bf6d239248e2eb00abab1f94591c2
 vendor/lib/libmmrtpencoder_proprietary.so|bb9b24108645b146045b3116d94b9a5ee7f99897
@@ -1060,11 +1075,11 @@ vendor/lib/libwfduibcsrcinterface_proprietary.so|0512c6ae4e9356f4c923913f1d1cadb
 vendor/lib/libwfdutils_proprietary.so|083ecf4bd940f4574ae39319c4e310c5fc78be76
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so|fdec0b67d1900c354bb47eb311ae318e420baa19
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so|0d10d27ad15c67e4721ef1ba47ac8ada480a6610
-vendor/lib64/libhdcp1prov.so|d8d58cbf3e28dec36fb205d585c1fda3f3029d3b
-vendor/lib64/libhdcp2p2prov.so|60e33d628d3d2f0c9c3f33526d971e2a8256cea0
-vendor/lib64/libhdcpsrm.so|df2e75437beae7de6c232addd42646ef5d7a5deb
 vendor/lib64/libmm-hdcpmgr.so|3956d47a9a519e3ccb263dc92cdba2363820ab6a
 vendor/lib64/libwfddisplayconfig_proprietary.so|0d3631313db53e101e576a8ece2fe3e2d6f227cc
 vendor/lib64/libwfdhdcpcp.so|cf7fc0f87ab5be744bf2565608528f654d7b0f94
--system/framework/WfdCommon.jar|aa7470dd5ccb2e2c695fd54c3aff01d21e2d7472
--system_ext/priv-app/WfdService/WfdService.apk|1b346d2e2e28fd7404841935ae9205820201ae63
+
+# Misc
+vendor/lib/libdsi_netctrl.so
+vendor/lib/libxml.so
+vendor/lib64/libxml.so
