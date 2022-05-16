@@ -433,11 +433,12 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
-    NfcNci \
-    Tag \
-    SecureElement \
+    android.hardware.nfc@1.2.vendor \
     com.android.nfc_extras \
-    libchrome.vendor
+    libchrome.vendor \
+    NfcNci \
+    SecureElement \
+    Tag
 
 # Perf
 PRODUCT_PACKAGES += \
