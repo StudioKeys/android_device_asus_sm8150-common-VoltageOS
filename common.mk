@@ -123,17 +123,18 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.soundtrigger@2.1-impl \
     android.hardware.soundtrigger@2.1 \
-    android.hardware.soundtrigger@2.0-core \
+    android.hardware.soundtrigger@2.0-core
+
+PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.msmnile \
     audio.r_submix.default \
-    audio.usb.default \
-    libaudio-resampler \
-    libaudioroute \
-    libhdmiedid \
-    libaudiopreprocessing \
+    audio.usb.default
+
+PRODUCT_PACKAGES += \
     liba2dpoffload \
+    libaudiopreprocessing \
     libbatterylistener \
     libbundlewrapper \
     libcomprcapture \
@@ -150,10 +151,12 @@ PRODUCT_PACKAGES += \
     libreverbwrapper \
     libsndmonitor \
     libspkrprot \
-    libssrec \
-    libtinycompress \
     libvisualizer \
     libvolumelistener \
+    libaudio-resampler \
+    libaudioroute \
+    libssrec \
+    libtinycompress \
     tinymix
 
 PRODUCT_COPY_FILES += \
