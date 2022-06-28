@@ -10,3 +10,4 @@ type asus_display_proc_exec, proc_type;
 
 # Sysfs
 type asus_display_sysfs, sysfs_type, fs_type;
+type sysfs_gesture, sysfs_type, fs_type;
