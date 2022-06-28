@@ -523,6 +523,10 @@ PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \
     android.hardware.tetheroffload.control@1.0.vendor
 
+# TouchGestures
+PRODUCT_PACKAGES += \
+    TouchGestures
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
