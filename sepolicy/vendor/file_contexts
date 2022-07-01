@@ -29,7 +29,7 @@
 /vendor/bin/awk                                                                                 u:object_r:vendor_toolbox_exec:s0
 
 # Touch
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.I01WD    u:object_r:hal_lineage_touch_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.asus_msmnile    u:object_r:hal_lineage_touch_default_exec:s0
 
 # Vibrator
 /sys/class/leds/vibrator(/.*)? u:object_r:sysfs_vibrator:s0
