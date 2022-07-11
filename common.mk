@@ -260,8 +260,11 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # Device-specific settings
-#PRODUCT_PACKAGES += \
-#    AsusParts
+PRODUCT_PACKAGES += \
+    AsusParts
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-asusparts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-asusparts.xml
 
 # Display
 PRODUCT_PACKAGES += \
