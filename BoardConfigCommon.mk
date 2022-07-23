@@ -128,11 +128,11 @@ BOARD_HAVE_QCOM_FM := true
 
 # HIDL
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH_COMMON)/manifest.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH_COMMON)/compatibility_matrix.xml
-ODM_MANIFEST_FILES := $(DEVICE_PATH_COMMON)/manifest-qva.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH_COMMON)/hidl/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH_COMMON)/hidl/compatibility_matrix.xml
+ODM_MANIFEST_FILES := $(DEVICE_PATH_COMMON)/hidl/manifest-qva.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH_COMMON)/framework_compatibility_matrix.xml \
+    $(DEVICE_PATH_COMMON)/hidl/framework_compatibility_matrix.xml \
     vendor/bliss/config/device_framework_matrix.xml
 
 # Keystore
