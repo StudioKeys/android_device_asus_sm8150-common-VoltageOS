@@ -38,11 +38,11 @@ public class AsusParts extends PreferenceFragment implements
     public static final String KEY_GLOVE_SWITCH = "glove";
     public static final String GLOVE_PATH = "/proc/driver/glove";
 
-    public static final String KEY_SWIPEUP_SWITCH = "swipeup";
-    public static final String SWIPEUP_PATH = "/proc/driver/swipeup";
+    //public static final String KEY_SWIPEUP_SWITCH = "swipeup";
+    //public static final String SWIPEUP_PATH = "/proc/driver/swipeup";
 
     private TwoStatePreference mGloveSwitch;
-    private TwoStatePreference mSwipeUpSwitch;
+    //private TwoStatePreference mSwipeUpSwitch;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -61,9 +61,9 @@ public class AsusParts extends PreferenceFragment implements
         mGloveSwitch.setChecked(Settings.System.getInt(getContext().getContentResolver(),
         KEY_GLOVE_SWITCH, 1) != 0);
 
-        mSwipeUpSwitch = (TwoStatePreference) findPreference(KEY_SWIPEUP_SWITCH);
-        mSwipeUpSwitch.setChecked(Settings.System.getInt(getContext().getContentResolver(),
-        KEY_SWIPEUP_SWITCH, 1) != 0);
+        //mSwipeUpSwitch = (TwoStatePreference) findPreference(KEY_SWIPEUP_SWITCH);
+        //mSwipeUpSwitch.setChecked(Settings.System.getInt(getContext().getContentResolver(),
+        //KEY_SWIPEUP_SWITCH, 1) != 0);
 
     }
 
@@ -74,11 +74,11 @@ public class AsusParts extends PreferenceFragment implements
             FileUtils.setValue(GLOVE_PATH, mGloveSwitch.isChecked() ? "1" : "0");
             return true;
         }
-        if (preference == mSwipeUpSwitch) {
-            Settings.System.putInt(getContext().getContentResolver(), KEY_SWIPEUP_SWITCH, mSwipeUpSwitch.isChecked() ? 1 : 0);
-            FileUtils.setValue(SWIPEUP_PATH, mSwipeUpSwitch.isChecked() ? "1" : "0");
-            return true;
-        }
+        //if (preference == mSwipeUpSwitch) {
+        //    Settings.System.putInt(getContext().getContentResolver(), KEY_SWIPEUP_SWITCH, mSwipeUpSwitch.isChecked() ? 1 : 0);
+        //    FileUtils.setValue(SWIPEUP_PATH, mSwipeUpSwitch.isChecked() ? "1" : "0");
+        //    return true;
+        //}
         return super.onPreferenceTreeClick(preference);
     }
 
