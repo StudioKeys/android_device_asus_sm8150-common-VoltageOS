@@ -4,9 +4,14 @@ allow init {
     log_file
     bat_file
 }:dir mounton;
-# Allow init to chown/chmod on pseudo files in /sys
 
-allow init sysfs_gesture:file { rw_file_perms setattr };
+allow init vendor_motor_camera:file write;
 
-# Allow init to bind mount over vendor file
-allow init { system_file vendor_file }:file mounton;
+allow init asus_sensors_exec:file r_file_perms;
+allow init asus_sensors:process transition;
+
+allow init asus_sp_exec:file r_file_perms;
+allow init asus_sp:process transition;
+
+allow init lasercsc_exec:file r_file_perms;
+allow init lasercsc:process transition;
