@@ -99,7 +99,7 @@ on early-boot
     chmod 0664 /mnt/vendor/persist/data/pfm/licenses/store_4
 
     # ASUS_BSP +++ ShowCai "For checking support front RGB or not"
-    setprop ro.asus.screen.colortemp.enable 0
+    #setprop ro.asus.screen.colortemp.enable 0
     # ASUS_BSP --- ShowCai "For checking support front RGB or not"
 
 on boot
