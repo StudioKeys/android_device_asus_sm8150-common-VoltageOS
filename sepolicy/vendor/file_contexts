@@ -16,6 +16,9 @@
 # Asus sp stuff
 /(vendor|system/vendor)/bin/sp                                                                     u:object_r:asus_sp_exec:s0
 
+# Awk
+/vendor/bin/awk                                                                                    u:object_r:vendor_toolbox_exec:s0
+
 # Camera
 /dev/stmvl53l1_ranging                                                                             u:object_r:asus_laser_device:s0
 /(vendor|system/vendor)/bin/lasercsc                                                               u:object_r:lasercsc_exec:s0
@@ -32,6 +35,7 @@
 # Fingerprint
 /data/vendor/goodix/gf_data(/.*)?                                                                  u:object_r:vendor_goodix_data_file:s0
 /dev/goodix_fp                                                                                     u:object_r:fingerprintd_device:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.asus_msmnile 		   u:object_r:hal_fingerprint_default_exec:s0
 
 # Files in rootfs
 /ADF(/.*)?                                                                                         u:object_r:demoapp_file:s0
@@ -40,9 +44,15 @@
 /batinfo(/.*)?                                                                                     u:object_r:bat_file:s0
 /xrom(/.*)?                                                                                        u:object_r:xrom_file:s0
 
+# Light Hal
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.asus_msmnile                     u:object_r:hal_light_default_exec:s0
+
 # Motor Camera
 /dev/asusMotoDrv                                                                                   u:object_r:asus_motor_device:s0
 
 # Sensors
 /dev/asus2ndAccelSensor                                                                            u:object_r:asus_sensors_device:s0
 /dev/asus2ndGyroSensor                                                                             u:object_r:asus_sensors_device:s0
+
+# Touch
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.asus_msmnile		   u:object_r:hal_lineage_touch_default_exec:s0
